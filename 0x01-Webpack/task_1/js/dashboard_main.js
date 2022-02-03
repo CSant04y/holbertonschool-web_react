@@ -1,4 +1,4 @@
-// const $ = require('jquery');
+const $ = require('jquery');
 const _ = require('lodash');
 
 $('body').append('<p>Holberton Dashboard</p>');
