@@ -1,0 +1,21 @@
+{
+  "name": "0x01-webpack",
+  "version": "1.0.0",
+  "description": "*  [Entry](https://webpack.js.org/concepts/#entry)  *  [Output](https://webpack.js.org/concepts/#output)  *  [Loaders](https://webpack.js.org/concepts/#loaders)  *  [Plugins](https://webpack.js.org/concepts/#plugins)  *  [Mode](https://webpack.js.org/concepts/#mode)  *  [Browser Compatibility](https://webpack.js.org/concepts/#browser-compatibility)",
+  "main": "index.js",
+  "devDependencies": {
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack"
+  },
+  "author": "CSant04y",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21"
+  }
+}
