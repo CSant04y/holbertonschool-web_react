@@ -7,5 +7,6 @@ button {
     width: 200px;
     height: 200px;
     background: url('../assets/holberton-logo.jpeg');
+    background-size: 200px 200px;
 }
 
