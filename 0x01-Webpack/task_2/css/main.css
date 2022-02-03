@@ -6,6 +6,6 @@ button {
 #logo {
     width: 200px;
     height: 200px;
-    background-image: url('../assets/holberton-logo.jpeg');
+    background: url('../assets/holberton-logo.jpeg');
 }
 
