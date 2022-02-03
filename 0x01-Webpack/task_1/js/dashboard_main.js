@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
-const btn = document.getElementById('count');
 let count = 0;
 function updateCounter() {
     count++;
