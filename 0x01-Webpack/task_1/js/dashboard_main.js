@@ -20,8 +20,7 @@ $(function(){
 
     let decouncedFunc = _.debounce(() => {
         const count = updateCounter();
-        const btn = document.getElementById('count');
-        btn.innerHTML(`${count} clicks on the button`);
+        $('#count').text(`${count} clicks on the button`);
     }, 500);
     $('button').on('click', decouncedFunc);
 });
