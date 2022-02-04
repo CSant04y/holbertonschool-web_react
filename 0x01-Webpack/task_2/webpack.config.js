@@ -37,7 +37,12 @@ module.exports = {
               // the webp option will enable WEBP
               webp: {
 		quality: 75
-              }
+              },
+              performance: {
+                hints: false,
+                maxEntrypointSize: 12000,
+                maxAssetSize: 12000
+            },
 	    }
 	  },
 	],
