@@ -15,6 +15,11 @@ module.exports = {
       },
       {
 	test: /\.(gif|png|jpe?g|svg)$/i,
+  performance: {
+    hints: false,
+    maxEntrypointSize: 100000,
+    maxAssetSize: 100000
+},
 	use: [
 	  'file-loader',
 	  {
@@ -38,12 +43,7 @@ module.exports = {
               webp: {
 		quality: 75
               },
-              performance: {
-                hints: false,
-                maxEntrypointSize: 100000,
-                maxAssetSize: 100000
-            },
-	    }
+            }
 	  },
 	],
       }
