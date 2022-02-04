@@ -15,7 +15,12 @@
   "author": "CSant04y",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^6.6.0",
+    "file-loader": "^6.2.0",
+    "image-optimize-webpack-loader": "^1.0.6",
+    "img-optimize-loader": "^1.0.7",
     "jquery": "^3.6.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "style-loader": "^3.3.1"
   }
 }
