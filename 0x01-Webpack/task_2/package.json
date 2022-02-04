@@ -4,6 +4,9 @@
   "description": "*  [Entry](https://webpack.js.org/concepts/#entry)  *  [Output](https://webpack.js.org/concepts/#output)  *  [Loaders](https://webpack.js.org/concepts/#loaders)  *  [Plugins](https://webpack.js.org/concepts/#plugins)  *  [Mode](https://webpack.js.org/concepts/#mode)  *  [Browser Compatibility](https://webpack.js.org/concepts/#browser-compatibility)",
   "main": "index.js",
   "devDependencies": {
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.1.0",
+    "style-loader": "^3.3.1",
     "webpack": "^5.68.0",
     "webpack-cli": "^4.9.2"
   },
@@ -16,12 +19,9 @@
   "license": "ISC",
   "dependencies": {
     "css-loader": "^6.6.0",
-    "file-loader": "^6.2.0",
     "image-optimize-webpack-loader": "^1.0.6",
-    "image-webpack-loader": "^8.1.0",
     "img-optimize-loader": "^1.0.7",
     "jquery": "^3.6.0",
-    "lodash": "^4.17.21",
-    "style-loader": "^3.3.1"
+    "lodash": "^4.17.21"
   }
 }
