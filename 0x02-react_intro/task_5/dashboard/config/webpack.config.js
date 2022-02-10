@@ -11,8 +11,13 @@ module.exports = {
         compress: true,
     },
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve('./dist'),
       filename: 'bundle.js',
+    },
+    performance: {
+      maxAssetSize: 100000,
+      maxEntrypointSize: 100000,
+      hints: false,
     },
     module: {
       rules: [
@@ -27,8 +32,16 @@ module.exports = {
         },
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
-          type: 'asset/resource',
-          loader: 'image-webpack-loader',
+          use: [
+            'file-loader',
+            {
+              loader: 'image-webpack-loader',
+              options: {
+                bypassOnDebug: true,
+                disable: true,
+              },
+            },
+          ],
         }
       ],
     },

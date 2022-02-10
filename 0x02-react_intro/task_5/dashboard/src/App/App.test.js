@@ -1,7 +1,10 @@
 import { shallow } from 'enzyme';
 import App from './App';
 import React from 'react';
+import "../../config/setupTests"
 
+
+configure({ adapter: new Adapter() });
 describe("<App>", () => {
     it("Making sure App loads", () => {
         shallow(<App />)

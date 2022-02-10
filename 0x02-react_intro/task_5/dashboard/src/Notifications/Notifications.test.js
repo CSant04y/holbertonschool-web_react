@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme';
 import Notifications from "./Notifications";
 import React from 'react';
+import "../../config/setupTests"
 
 describe("Testing the <Notifications /> componet", () => {
     it("test Notifications Render", () => {
