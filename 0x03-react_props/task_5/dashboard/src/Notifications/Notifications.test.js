@@ -19,8 +19,8 @@ describe("Testing the <Notifications /> componet", () => {
       });
 
     it("test Notifications Render", () => {
-        const wrapper = shallow(<Notifications displayDrawer/>);
-        expect(wrapper.exists()).to.be.an(true);
+        const wrapper = shallow(<Notifications displayDrawer listNotifications={listNotifications}/>);
+        expect(wrapper.exists()).to.equal(true);
     });
 
     it("Tests to see if <Notifications />  has three componets", () => {
@@ -30,7 +30,7 @@ describe("Testing the <Notifications /> componet", () => {
     });
 
     it("Tests to see if <Notifications /> has correct html", () => {
-        const wrapper = shallow(<Notifications displayDrawer={true}/>);
+        const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications} />);
         expect(wrapper.find('ul')
         .childAt(0).html())
         .to
@@ -38,7 +38,7 @@ describe("Testing the <Notifications /> componet", () => {
     });
 
     it("Tests the <Notifications /> p tag", () => {
-        const wrapper = shallow(<Notifications displayDrawer={true}/>);
+        const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications}/>);
         expect(wrapper.contains(<p>Here is the list of notifications</p>)).to.equal(true);
     });
 
@@ -53,12 +53,12 @@ describe("Testing the <Notifications /> componet", () => {
     })
 
     it("Tests menuItem is displayed when displayDrawer is true", () => {
-        const wrapper = shallow(<Notifications displayDrawer={true} />); 
+        const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications}/>); 
         expect(wrapper.find("div.menuItem").exists()).to.equal(true);
     });
 
     it("Tests that div.Notifications is being displayed when displayDrawer is true", () => {
-        const wrapper = shallow(<Notifications displayDrawer={true} />);
+        const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications}/>);
         expect(wrapper.find("div.Notifications").exists()).to.equal(true);
     })
 

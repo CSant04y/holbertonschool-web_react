@@ -33,12 +33,15 @@ const Notifications = ({ displayDrawer, listNotifications }) => {
                 <p>Here is the list of notifications</p>
                 <ul>
                 {listNotifications.length === 0 && (
+                    <>
                     <NotificationItem
                         className="default"
                         value='No new notification for now'
                     />
+                    </>
                 )}
                 {listNotifications.map((notification) => (
+                    <>
                     <NotficationItem        
                         className={notification.type}            
                         key={notification.id}
@@ -46,23 +49,9 @@ const Notifications = ({ displayDrawer, listNotifications }) => {
                         value={notification.value}
                         html={notification.html}
                     />
+                    </>
                 ))
                 }
-                    {/* <NotficationItem 
-                    className="default"
-                    type='default' 
-                    value='New course available'
-                    />
-                    <NotficationItem 
-                    className='urgent'
-                    type='urgent' 
-                    value='New resume available'
-                    />
-                    <NotficationItem 
-                    className='urgent'
-                    type='urgent' 
-                    html={{__html: getLatestNotification()}}
-                    /> */}
                 </ul>
             </div>
             )
