@@ -57,18 +57,3 @@ describe("<App />", () => {
         expect(wrapper.exists(CourseList)).to.equal(true);
     })
 })
-
-decribe("<App /> ", () => {
-    it("Mocks Alert('Logging you out') when pressing Ctrl + h", () => {
-        const myLogOut = jest.fn(() => undefined);
-        const appComp = mount(<App logOut={myLogOut} />);
-        const log = jest.spyOn(console, 'log');
-    
-        expect(appComp.props.logOut);
-        expect(log);
-    
-        jest.restoreAllMocks();    
-        
-    })
-})
-
