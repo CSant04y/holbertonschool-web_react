@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Notifications from "./Notifications";
 import React from 'react';
 import "../../config/setupTests"
@@ -111,3 +111,41 @@ describe("<Notifications />", () => {
     jest.restoreAllMocks();    
   })
 });
+
+describe("<Notification /> ", () => {
+
+  let wrapper
+  let i;
+  let propsNotif = {
+		displayDrawer: true,
+		listNotifications: listNotifications,
+	};
+  let listNotifications = [
+		{
+			id: i++,
+			type: "default",
+			value: "New course available",
+		},
+		{
+			id: i++,
+			type: "urgent",
+			value: "New resume available",
+		},
+		{
+			id: i++,
+			type: "urgent",
+			html: {__html: getLatestNotification()},
+		}
+	];
+  const spyNotif = jest.spyOn(Notifications.prototype, 'shouldComponentUpdate');
+  beforeEach(() => {
+    wrapper = shallow(<Notifications {...propsNotif} />);
+  })
+
+  it("Tests that notifications does not rerender if the same", () => {
+    const NotifComp = mount(<Notifications {...propsNotif}/>);
+    expect(spyNotif);
+    NotifComp.setProps({...propsNotif});
+  })
+
+})

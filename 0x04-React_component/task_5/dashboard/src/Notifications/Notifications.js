@@ -10,9 +10,17 @@ import NotificationItemShape from './NotificationItemShape.js';
 
 
 class Notifications extends React.PureComponent {
+
     constructor(props) {
         super(props);
         this.markAsRead = this.markAsRead.bind(this);
+    }
+
+    shouldComponentUpdate(nextProps) {
+        if(this.props.listNotifications.length < nextProps.listNotifications.length) {
+            return true
+        }
+        return false
     }
 
     markAsRead(id) {
