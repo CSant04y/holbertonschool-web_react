@@ -34,26 +34,12 @@ class NotificationItem extends React.Component {
     }
 }
 
-const screenSize = {
-    small: '@media screen and (max-width: 900px)',
-  };
-  
-  const Small = {
-      padding: '10px 8px',
-      borderBottom: '1px solid black',
-      listStyle: 'none',
-      fontSize: '20px',
-  };
-  
-
 const styles = StyleSheet.create({
 	defaultNotif: {
 		color: 'blue',
-        [screenSize.small]: Small,
 	},
 	urgentNotif: {
 		color: 'red',
-        [screenSize.small]: Small,
 	},
 });
 
