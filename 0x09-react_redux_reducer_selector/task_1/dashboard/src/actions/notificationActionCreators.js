@@ -4,9 +4,9 @@ import {
     NotificationTypeFilters,
   } from './notificationActionTypes.js';
   
-  const markAsAread = (index) => ({ type: MARK_AS_READ, index });
+  const markAsAread = (index) => dispatch({ type: MARK_AS_READ, index });
   
-  const setNotificationFilter = (filter) => ({ type: NotificationTypeFilters, filter });
+  const setNotificationFilter = (filter) => dispatch({ type: NotificationTypeFilters, filter });
 
 module.exports = {
     markAsAread,

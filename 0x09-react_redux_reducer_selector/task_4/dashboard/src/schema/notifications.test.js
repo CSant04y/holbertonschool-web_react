@@ -23,7 +23,8 @@ describe("Testing getAllNotificationByUser", () => {
     it("Check to make sure data passed returns correct data", () => {
       const userId = '5debd764a7c57c7839d722e9'
       const matchingUser = getAllNotificationsByUser(userId);
-
+      console.log(matchingUser);
+      // console.log(expect(data).arrayContaining(matchingUser));
       expect(matchingUser).toEqual(expect.arrayContaining(data));
     })
 
